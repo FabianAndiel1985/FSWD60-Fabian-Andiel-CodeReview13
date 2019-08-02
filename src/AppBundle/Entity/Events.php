@@ -28,19 +28,12 @@ class Events
      */
     private $name;
 
-    /**
-     * @var \DateTime
+     /**
+     * @var string
      *
-     * @ORM\Column(name="start_date", type="date")
+     * @ORM\Column(name="startDate", type="string", length=200)
      */
     private $startDate;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="start_time", type="time")
-     */
-    private $startTime;
 
     /**
      * @var string
@@ -178,29 +171,7 @@ class Events
         return $this->startDate;
     }
 
-    /**
-     * Set startTime
-     *
-     * @param \DateTime $startTime
-     *
-     * @return Events
-     */
-    public function setStartTime($startTime)
-    {
-        $this->startTime = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * Get startTime
-     *
-     * @return \DateTime
-     */
-    public function getStartTime()
-    {
-        return $this->startTime;
-    }
+    
 
     /**
      * Set description
