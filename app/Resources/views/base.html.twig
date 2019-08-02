@@ -12,12 +12,26 @@
         <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
 
+        <style type="text/css">
+          /*body {
+            background-color: black;
+          }*/
+
+          #main {
+            margin-top: 100px;
+          }
+
+
+        </style>
+
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
 
         <!--Main Navigation-->
+      
+      <div class="container_fluid">
         <header>
 
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
@@ -57,6 +71,7 @@
 
         </header>
         <!--Main Navigation-->
+      </div>
         
         {% block body %}
         {% endblock %}
