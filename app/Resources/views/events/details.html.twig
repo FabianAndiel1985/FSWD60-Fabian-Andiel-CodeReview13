@@ -1,7 +1,42 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-	<br><br><br><br><br><br><br><br><br><br><br>
-	<p> {{event.name}} </p>
-	<p> {{event.description}} </p>
+	<br><br><br><br>
+
+	<div class="container">
+
+		<!-- Jumbotron -->
+		<div class="jumbotron text-center">
+
+		  <!-- Title -->
+		  <h4 class="card-title h4 pb-2"><strong>{{event.name}}</strong></h4>
+
+		  <!-- Card image -->
+		  <div class="view overlay my-4">
+		    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid" alt="">
+		    <a href="#">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
+
+		  <p class="card-text">  </p>
+
+		  <ul class="list-group list-group-flush">
+			  <li class="list-group-item"> Event id: {{event.id}}  </li>
+			  <li class="list-group-item"> Start: {{event.startDate}}  </li>
+			  <li class="list-group-item">Capacity: {{event.capacity}}  </li>
+			  <li class="list-group-item">Contact email: {{event.contactEmail}} </li>
+			  <li class="list-group-item">Phone number: {{event.contactPhoneNumber}}</li>
+			  <li class="list-group-item">Adress: {{event.streetName}} {{event.streetNumber}}, {{event.zip}} {{event.city}}   </li>
+			  <li class="list-group-item">Url: {{event.url}}  </li>
+			  <li class="list-group-item">Type: {{event.type}}  </li>
+
+
+
+		  </ul>
+
+		</div>
+		<!-- Jumbotron -->
+		
+	</div>
        
 {% endblock %}

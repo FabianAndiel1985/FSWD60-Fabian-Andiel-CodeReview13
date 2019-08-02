@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 
 
@@ -49,18 +50,18 @@ class EventsController extends Controller
 
        $form = $this->createFormBuilder($event)->add('name', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
        ->add('startDate', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
-       ->add('description', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-       ->add('image', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-      ->add('capacity', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-      ->add('contactEmail', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('contactPhoneNumber', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('streetName', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('streetNumber', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('zip', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('city', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('url', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('type', DateTimeType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-   ->add('save', SubmitType::class, array('label'=> 'Update Event', 'attr' => array('class'=> 'btn-primary', 'style'=>'margin-botton:15px')))
+       ->add('description', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
+       ->add('image', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
+      ->add('capacity', IntegerType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
+      ->add('contactEmail', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('contactPhoneNumber', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('streetName', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('streetNumber', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('zip', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('city', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('url', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('type', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+   ->add('save', SubmitType::class, array('label'=> 'Create Event', 'attr' => array('class'=> 'btn-primary', 'style'=>'margin-botton:15px')))
        ->getForm();
        $form->handleRequest($request);
 
@@ -156,16 +157,16 @@ class EventsController extends Controller
        $form = $this->createFormBuilder($event)->add('name', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
        ->add('startDate', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-bottom:15px')))
        ->add('description', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-       ->add('image', TextareaType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
-      ->add('capacity', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('contactEmail', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('contactPhoneNumber', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('streetName', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('streetNumber', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('zip', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('city', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('url', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
-      ->add('type', TextareaType::class, array('attr' => array('style'=>'margin-bottom:15px')))
+       ->add('image', TextType::class, array('attr' => array('class'=> 'form-control', 'style'=>'margin-botton:15px')))
+      ->add('capacity', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('contactEmail', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('contactPhoneNumber', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('streetName', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('streetNumber', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('zip', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('city', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('url', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
+      ->add('type', TextType::class, array('attr' => array('class'=> 'form-control','style'=>'margin-bottom:15px')))
    ->add('save', SubmitType::class, array('label'=> 'Update Event', 'attr' => array('class'=> 'btn-primary', 'style'=>'margin-botton:15px')))
        ->getForm();
        $form->handleRequest($request);
