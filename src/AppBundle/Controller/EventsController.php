@@ -30,11 +30,14 @@ class EventsController extends Controller
       */
      public function listAction(){
          $events = $this->getDoctrine()->getRepository('AppBundle:Events')->findById(array(1,2,3));
+         $events1 = $this->getDoctrine()->getRepository('AppBundle:Events')->findById(array(4,5,6));
+
 
   
          // replace this example code with whatever you need
-         return $this->render('events/index.html.twig', array('events'=>$events));
+         return $this->render('events/index.html.twig', array('events'=>$events,'events1'=>$events1));
      }
+
 
 
    // to create entry

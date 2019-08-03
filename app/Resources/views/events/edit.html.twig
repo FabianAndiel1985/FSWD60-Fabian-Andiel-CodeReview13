@@ -3,15 +3,31 @@
 <h2 class="page-header">Add Todo</h2>
 
 
-	<div class="container">
+	<div class="container mt-5">
 
-		<div id="edit">
-		{{form_start(form)}}
-		{{form_widget(form)}}	
-		{{form_end(form)}}
+		<div id="edit_row" class="d-flex justify-content-center">
+
+			<div class="create_edit_container">
+				{{form_start(form)}}
+				{{form_widget(form)}}	
+				{{form_end(form)}}
+			</div>
+
 		</div>
 
-	</div>
+		<div id="edit_row_1" class="d-flex justify-content-center mt-4">
+
+			<div class="create_edit_container">
+				<a href="{{ path('events_list') }}">
+					<button class="btn blue-gradient ml-0">
+						Back
+					</button>
+				</a>
+			</div>
+
+		</div>
+
+	</div>  <!-- end of edit container -->
 
 
 
